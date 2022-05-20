@@ -16,9 +16,10 @@ const List = () => {
             console.log(data);
             setPosts(data)
             setLoading(false)
-          }catch(error){
-            setError(error)
+          }catch(err){
+            setError(err)
             setLoading(false)
+            console.log(error)
           }
         }
         getItems();
