@@ -19,7 +19,6 @@ const List = () => {
           }catch(err){
             setError(err)
             setLoading(false)
-            console.log(error)
           }
         }
         getItems();
@@ -31,6 +30,9 @@ const List = () => {
           <section className="loader"></section>
         </div>
       )
+    }
+    if(error){
+      console.log(error);
     }
 
   return (
