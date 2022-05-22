@@ -4,16 +4,18 @@ import "./List.css"
 import ListItem from './ListItem'
 
 const List = () => {
+
+  //set inital states
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState("")
 
+      //get data from jsonplaceholder api on page load
       useEffect(()=>{
         const getItems = async() =>{
           try{
             setLoading(true)
             const data = await(await fetch("https://jsonplaceholder.typicode.com/posts")).json()
-            console.log(data);
             setPosts(data)
             setLoading(false)
           }catch(err){
@@ -24,6 +26,7 @@ const List = () => {
         getItems();
       },[])
 
+    //display loading before data is fetched
     if(loading){
       return (
         <div className="loading">

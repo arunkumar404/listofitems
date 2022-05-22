@@ -1,12 +1,12 @@
 .itemOne{
-    display: block;
-    background-color: antiquewhite;
+    background-color: #dbebbd;
     width: 100%;
     height: 8rem;
     padding: 1rem;
     box-sizing: border-box;
     margin-bottom: 1rem;
     border-radius: 10px;
+    transition: all ease-in-out .2s;
 }
 .title{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -14,6 +14,7 @@
 }
 
 .itemOne:hover{
-    background-color: rgba(215, 203, 187, 0.621);
-    transform: skew(5deg);
+    background-color: #dbebbda3;
+    box-shadow: 3px 3px 10px -1px rgba(0, 0, 0, 0.58);
+    transform: scale(1.01);
 }
